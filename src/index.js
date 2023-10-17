@@ -13,9 +13,10 @@ import {persistor} from './store';
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <Provider store={store}>
-    <PersistGate loading={null} persistor={persistor}></PersistGate>
+    <PersistGate loading={null} persistor={persistor}>
     <ChakraProvider>
       <App />
     </ChakraProvider>
+    </PersistGate>
   </Provider>
 );
