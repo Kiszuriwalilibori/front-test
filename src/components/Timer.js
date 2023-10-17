@@ -3,8 +3,10 @@ import React, { useEffect, useState } from "react";
 
 const Timer = () => {
   const [seconds, setSeconds] = useState(0);
+  const [date, setDate] = useState(0);
 
   useEffect(() => {
+   
     const interval = setInterval(() => {
       setSeconds(seconds=> seconds + 1);
     }, 1000);
@@ -14,7 +16,13 @@ const Timer = () => {
     };
   }, []);
 
-  const date = new Date().toTimeString();
+  useEffect(() => {
+    const date = new Date().toTimeString();
+    setDate(date)
+
+  },[])
+  
+  new Date().toTimeString();
 
   return (
     <VStack gap="10px" align="left">
