@@ -21,3 +21,10 @@ div {
   background-color: #313131;
 }
 
+
+.light-mode div {
+  color: #313131;
+  background-color: white;
+}
+
+
